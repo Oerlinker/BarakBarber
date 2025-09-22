@@ -46,7 +46,6 @@ hs_err_pid*
 # Archivos de entorno / secretos
 .env
 .env.local
-# Evitar subir properties con credenciales. Mantén application.properties.example en el repo en su lugar
 /src/main/resources/application.properties
 
 # Build/paquetes adicionales

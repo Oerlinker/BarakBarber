@@ -12,9 +12,9 @@ public class rolSeeder {
 @Bean
     CommandLineRunner initRoles(RolRepository rolRepository){
     return args -> {
-        String[] roles = {"ADMIN","BARBERO","SECRETARIA"};
+        String[] roles = {"ADMIN","BARBERO","SECRETARIA","CLIENTE"};
         for(String roleName : roles){
-            if(rolRepository.findByNombre(roleName).isEmpty()){
+            if(rolRepository.findByName(roleName).isEmpty()){
                 rolRepository.save(new Rol(roleName));
                 System.out.println("Rol creado: " + roleName);
             }

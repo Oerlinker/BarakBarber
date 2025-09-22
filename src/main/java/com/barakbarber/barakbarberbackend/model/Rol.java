@@ -12,14 +12,14 @@ public class Rol {
     private long id;
 
     @Column(nullable = false, unique = true)
-    String nombre;
+    String name;
 
     public Rol() {
     }
 
 
     public Rol(String nombre) {
-        this.nombre = nombre;
+        this.name = nombre;
     }
 
     public long getId() {
@@ -31,10 +31,10 @@ public class Rol {
     }
 
     public String getNombre() {
-        return nombre;
+        return name;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setNombre(String name) {
+        this.name = name;
     }
 }

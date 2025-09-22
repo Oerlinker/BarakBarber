@@ -21,7 +21,7 @@ public class RolService {
 
     @Loggable("CREAR_ROL")
     public Rol createRol(Rol rol) throws Exception {
-        Optional<Rol> existing = rolRepository.findByNombre(rol.getNombre());
+        Optional<Rol> existing = rolRepository.findByName(rol.getName());
         if (existing.isPresent()) {
             throw new Exception("El rol ya existe");
         } else {
@@ -43,7 +43,7 @@ public class RolService {
     @Loggable("ACTUALIZAR_ROL")
     public Rol updateRol(Long id, Rol updatedRol) throws Exception {
         Rol rol = getRolById(id);
-        rol.setNombre(updatedRol.getNombre());
+        rol.setName(updatedRol.getName());
         return rolRepository.save(rol);
     }
 }
